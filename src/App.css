@@ -1,0 +1,61 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+ 
+}
+
+.main-layout {
+  display: flex;
+  margin-top: 70px; /* Offset for fixed header */
+  flex: 1;
+  background-color: #f5f5f5;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #2c3e50;
+  color: white;
+  height: calc(100vh - 70px);
+  position: fixed;
+  overflow-y: auto;
+}
+
+.main-content {
+  flex: 1;
+  margin-left: 250px;
+  padding: 20px;
+  background-color: #f5f5f5;
+  min-height: calc(100vh - 70px);
+}
+.table-scroll-wrapper {
+  max-height: 500px; /* You can adjust this height as needed */
+  overflow-y: auto;
+}
+
+/* Optional for sticky header */
+.price-list-table thead th {
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .main-layout {
+    flex-direction: column;
+    margin-top: 120px; /* More space for stacked header */
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .main-content {
+    margin-left: 0;
+    min-height: auto;
+  }
+}

@@ -1,0 +1,127 @@
+/* Scrollable container that allows the whole app to scroll */
+.scrollable-page {
+  position: fixed;
+  top: 187px; /* Header height */
+  left: 250px; /* Sidebar width */
+  right: 0;
+  bottom: 0;
+  overflow-y: auto;
+  background: white;
+  z-index: 800;
+}
+
+
+/* Wrapper for padding around content */
+.price-list-container {
+  width: calc(100% - 20px);
+  margin: 0 auto;
+  padding: 15px;
+}
+
+/* Allows horizontal scrolling if table is wide */
+.table-scroll-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* Table layout */
+.price-list-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 10px 12px; /* horizontal and vertical gaps between cells */
+  font-family: Arial, sans-serif;
+  color: black;
+}
+
+/* Table header */
+.price-list-table th {
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 900;
+  padding: 14px 18px;
+  text-align: left;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Table cells */
+.price-list-table td {
+  border: 1px solid #add8e6; /* Light blue border */
+  border-radius: 25px;        /* Rounded corners */
+  background-color: white;
+  padding: 14px 18px;
+  text-align: left;
+}
+
+/* Optional: remove top border between rows */
+/* .price-list-table tr:not(:first-child) td {
+  border-top: none;
+} */
+
+/* Arrow styles */
+.arrow-down::after {
+  content: '▼';
+  margin-left: 5px;
+  font-size: 0.8em;
+}
+
+.arrow-right::before {
+  content: '▶';
+  margin-right: 5px;
+  font-size: 0.9em;
+  color: darkblue;
+}
+
+/* Color classes for arrow colors */
+.light-blue::after {
+  color: lightblue;
+}
+
+.green::after {
+  color: green;
+}
+
+/* Loading & error messages */
+.loading-message,
+.error-message {
+  padding: 20px;
+  text-align: center;
+  background: white;
+}
+
+.error-message {
+  color: #ff0000;
+}
+
+/* Responsive for tablets */
+@media (max-width: 1024px) {
+  .scrollable-page {
+    left: 0; /* Full width if sidebar disappears */
+  }
+
+  .price-list-table {
+    min-width: 100%;
+  }
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  .price-list-table td {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
+  .arrow-down::after,
+  .arrow-right::before {
+    font-size: 0.7em;
+  }
+}
+@media (max-width: 768px) {
+  .scrollable-page {
+    position: static; /* change fixed to static */
+    width: 100%;
+    height: auto;     /* auto height to fit content */
+    overflow-y: visible; /* no fixed scroll */
+  }
+}
