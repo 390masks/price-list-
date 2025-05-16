@@ -1,6 +1,6 @@
 import React from 'react';
 import Sidebar from '../Components/Sidebar/Sidebar';
-import SearchBar from '../components/SearchBar/SearchBar';
+import SearchBar from '../Components/SearchBar/SearchBar';
 import ProductList from '../Components/ProductList/ProductList';
 import Header from '../Components/Header/Header';
 import './PriceList.css';
@@ -8,12 +8,11 @@ import './PriceList.css';
 const PriceList = () => {
   return (
     <div className="price-list-container">
-      <Header/>
+      <Header />
       <Sidebar />
       <div className="main-content">
         <SearchBar />
         <ProductList />
-       
       </div>
     </div>
   );
