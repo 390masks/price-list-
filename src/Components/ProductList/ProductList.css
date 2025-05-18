@@ -1,8 +1,8 @@
-/* Scrollable container that allows the whole app to scroll */
+
 .scrollable-page {
   position: fixed;
-  top: 187px; /* Header height */
-  left: 250px; /* Sidebar width */
+  top: 187px; 
+  left: 250px; 
   right: 0;
   bottom: 0;
   overflow-y: auto;
@@ -11,14 +11,14 @@
 }
 
 
-/* Wrapper for padding around content */
+
 .price-list-container {
   width: calc(100% - 20px);
   margin: 0 auto;
   padding: 15px;
 }
 
-/* Allows horizontal scrolling if table is wide */
+
 .table-scroll-wrapper {
   width: 100%;
   overflow-x: auto;
@@ -28,7 +28,7 @@
 .price-list-table {
   width: 100%;
   border-collapse: separate;
-  border-spacing: 10px 12px; /* horizontal and vertical gaps between cells */
+  border-spacing: 10px 12px; 
   font-family: Arial, sans-serif;
   color: black;
 }
@@ -47,17 +47,13 @@
 
 /* Table cells */
 .price-list-table td {
-  border: 1px solid #add8e6; /* Light blue border */
-  border-radius: 25px;        /* Rounded corners */
+  border: 1px solid #add8e6; 
+  border-radius: 25px;        
   background-color: white;
   padding: 14px 18px;
   text-align: left;
 }
 
-/* Optional: remove top border between rows */
-/* .price-list-table tr:not(:first-child) td {
-  border-top: none;
-} */
 
 /* Arrow styles */
 .arrow-down::after {
@@ -73,7 +69,7 @@
   color: darkblue;
 }
 
-/* Color classes for arrow colors */
+
 .light-blue::after {
   color: lightblue;
 }
@@ -97,7 +93,7 @@
 /* Responsive for tablets */
 @media (max-width: 1024px) {
   .scrollable-page {
-    left: 0; /* Full width if sidebar disappears */
+    left: 0; 
   }
 
   .price-list-table {
@@ -119,9 +115,22 @@
 }
 @media (max-width: 768px) {
   .scrollable-page {
-    position: static; /* change fixed to static */
+    position: static; 
     width: 100%;
-    height: auto;     /* auto height to fit content */
-    overflow-y: visible; /* no fixed scroll */
+    height: auto;     
+    overflow-y: visible; 
+  }
+  .column-article-no,
+  .column-in-price,
+  .column-unit,
+  .column-stock,
+  .column-description {
+    display: none;
+  }
+
+  .column-name,
+  .column-price {
+    font-size: 14px;
+    padding: 10px;
   }
 }
