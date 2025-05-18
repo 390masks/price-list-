@@ -33,8 +33,9 @@ const ProductList = () => {
           <table className="price-list-table">
           <thead>
             <tr>
-              <th className="column-article-no">Article No.</th>
-              <th className="column-name">Product/Service</th>
+              <th></th>
+              <th className="column-article-no arrow-down">Article No.</th>
+              <th className="column-name arrow-down">Product/Service</th>
               <th className="column-in-price">In Price</th>
               <th className="column-price">Price</th>
               <th className="column-unit">Unit</th>
@@ -45,6 +46,7 @@ const ProductList = () => {
           <tbody>
             {products.map((product) => (
               <tr key={product.id || product.articleNo}>
+                <td className='arrow-right'></td>
                 <td className="column-article-no">{product.article_no}</td>
                 <td className="column-name">{product.product_name}</td>
                 <td className="column-in-price">{product.in_price}</td>
@@ -52,6 +54,7 @@ const ProductList = () => {
                 <td className="column-unit">{product.unit}</td>
                 <td className="column-stock">{product.in_stock}</td>
                 <td className="column-description">{product.description}</td>
+                <td className="column-options">...</td>
               </tr>
             ))}
           </tbody>

@@ -46,11 +46,26 @@
   padding: 14px 18px;
   text-align: left;
 }
+.column-options{
+  border: none !important;
+  background: none !important;
+  box-shadow: none !important;
+  font-weight: bolder;
+  color: lightblue;
+}
+.arrow-right{
+  border: none !important;
+  background: none !important;
+  box-shadow: none !important;
+  font-weight: bolder;
+  color: lightblue;
+}
 
 .arrow-down::after {
   content: '▼';
   margin-left: 5px;
   font-size: 0.8em;
+  color: #ff0000;
 }
 
 .arrow-right::before {
