@@ -1,18 +1,17 @@
 .search-section {
   position: fixed;
-  top: 70px; /* Header height */
-  left: 250px; /* Sidebar width */
+  top: 70px;
+  left: 250px;
   right: 0;
   padding: 15px;
   background: white;
   z-index: 800;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .search-container {
   margin-bottom: 15px;
 }
-
 
 .search-container h3 {
   font-size: 1.1rem;
@@ -22,47 +21,44 @@
 }
 
 .search-container input {
- 
-    width: 200px;
-    padding: 2px 70px 2px 12px;
-    border: 1px solid #ddd;
-    border-radius: 50px;
-    font-size: 0.9rem;
-    background-color: white; 
-    color: #000;  
-    margin-top: 10px;           
-  }
-  .input-wrapper {
-    display: flex;
-    align-items: center;
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 50px;
-    padding: 0 12px;
-    margin-top: 10px;
-    width: fit-content;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
-  }
-  
-  .input-wrapper input {
-    border: none;
-    outline: none;
-    padding: 4px 12px;
-    border-radius: 50px;
-    font-size: 0.9rem;
-    background-color: transparent;
-    color: #000;
-    width: 300px;
-  
-    
-  }
-  
-  .search-icon {
-    color: #226be8;
-    font-size: 16px;
-    margin-right: 8px;
-  }
-  
+  width: 200px;
+  padding: 2px 70px 2px 12px;
+  border: 1px solid #ddd;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  background-color: white;
+  color: #000;
+  margin-top: 10px;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 50px;
+  padding: 0 12px;
+  margin-top: 10px;
+  width: fit-content;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.input-wrapper input {
+  border: none;
+  outline: none;
+  padding: 4px 12px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  background-color: transparent;
+  color: #000;
+  width: 300px;
+}
+
+.search-icon {
+  color: #226be8;
+  font-size: 16px;
+  margin-right: 8px;
+}
 
 .search-container input:focus {
   outline: none;
@@ -76,7 +72,6 @@
   top: 10px;
   display: flex;
   gap: 10px;
-  
 }
 
 .action-buttons button {
@@ -87,64 +82,82 @@
   background-color: white;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   color: black;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
-.new-product{
+
+.new-product {
   border-radius: 50%;
 }
 
-
-
 /* Responsive adjustments */
+
 @media (max-width: 992px) {
-  .search-section {
-    left: 0; /* Full width when sidebar is hidden */
-    top: 60px; /* Adjusted header height */
-  }
-}
-/* Mobile styles */
-@media (max-width: 768px) {
   .search-section {
     left: 0;
     top: 60px;
-    padding: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .search-section {
+    position: static;
+    width: 100%;
+    padding: 10px 15px;
+    box-shadow: none;
+    margin-top: 70px;
+    box-sizing: border-box;
   }
 
   .search-container {
     display: flex;
     flex-direction: column;
     gap: 12px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .input-wrapper {
-    width: 100% !important; /* full width on mobile */
-    box-shadow: none; /* optional: softer look */
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: none;
+    padding: 0 12px;
   }
 
   .input-wrapper input {
-    width: 100% !important; /* input fills container */
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .action-buttons {
-    position: static; /* so it flows normally below inputs */
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 15px;
-    justify-content: flex-start;
+    position: static;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 12px;
+    margin: 15px 20px;
   }
 
   .action-buttons button {
-    flex: 1 1 45%; /* buttons take ~half width, wrap if needed */
-    min-width: 120px;
+    flex: 0 0 auto;
+    min-width: auto;
+    padding: 18px;
+    border-radius: 50%; /* fully rounded */
+    width: 60px;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .action-buttons button i {
+    font-size: 24px; /* big icons */
+  }
+
+  .action-buttons button span {
+    display: none; /* hide text */
   }
 }
 
-@media (max-width: 768px) {
-  .search-section {
-    position: static; /* existing */
-    width: 100%;
-    padding: 10px 15px;
-    box-shadow: none;
-    margin-top: 70px; /* Add margin to clear fixed header */
-  }
-}
+

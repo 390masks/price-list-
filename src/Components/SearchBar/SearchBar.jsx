@@ -26,13 +26,13 @@ const SearchBar = () => {
       
       <div className="action-buttons">
         <button className="new-product">
-          New Product <FaPlus color='green' />
+          <span>New Product</span> <FaPlus color='green' />
         </button>
         <button className="print-list">
-          Print List <FaPrint color='blue' />
+          <span>Print List</span> <FaPrint color='blue' />
         </button>
         <button className="advanced-mode">
-          Advanced mode <FaTools color='yellow' />
+          <span>Advanced mode</span> <FaTools color='yellow' />
         </button>
       </div>
     </div>
