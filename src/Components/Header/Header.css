@@ -57,7 +57,7 @@
 
 .company-name {
   font-size: 1.5rem;
-  font-weight: 60;
+  font-weight: 600;
   margin: 0;
   line-height: 1.2;
 }
@@ -79,7 +79,7 @@
   font-weight: 500;
   margin: 0;
   padding: 8px 15px;
-  order: 1; /* Ensures name comes before flag */
+  order: 1;
 }
 
 .country-flag {
@@ -90,11 +90,9 @@
   box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2);
   order: 2;
 }
-/* ... (keep previous styles) ... */
 
-/* Hamburger Menu Styles */
 .hamburger-menu {
-  display: none; /* Hidden by default */
+  display: none;
   background: none;
   border: none;
   color: white;
@@ -110,71 +108,47 @@
   gap: 15px;
 }
 
-/* Tablet and Mobile Styles */
-@media (max-width: 992px) { /* Tablet breakpoint */
+@media (max-width: 992px) {
   .hamburger-menu {
-    display: block; /* Show hamburger */
+    display: block;
   }
-  
   .desktop-profile-info {
-    display: none; /* Hide profile info */
+    display: none;
   }
-  
   .header-left {
-    gap: 0; /* Remove extra gap */
+    gap: 0;
   }
 }
 
-@media (max-width: 768px) { /* Mobile adjustments */
+@media (max-width: 768px) {
   .hamburger-menu {
     font-size: 1.3rem;
   }
-  
   .user-name {
     padding: 6px 12px;
     font-size: 0.9rem;
   }
-  
   .country-flag {
     width: 20px;
     height: 14px;
   }
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
   .header-content {
     padding: 12px 15px;
   }
-
   .header-left {
     gap: 10px;
   }
-
   .profile-pic-container {
     width: 36px;
     height: 36px;
   }
-
   .company-name {
     font-size: 1.3rem;
   }
-
   .company-location {
     font-size: 0.8rem;
   }
-
   .header-right {
     gap: 8px;
-  }
-
-  .user-name {
-    padding: 6px 12px;
-    font-size: 0.9rem;
-  }
-
-  .country-flag {
-    width: 20px;
-    height: 14px;
   }
 }

@@ -31,30 +31,30 @@ const ProductList = () => {
       <div className="price-list-container">
         <div className="table-scroll-wrapper">
           <table className="price-list-table">
-            <thead>
-              <tr>
-                <th className="arrow-down light-blue">Article No.</th>
-                <th className="arrow-down green">Product/Service</th>
-                <th>In Price</th>
-                <th>Price</th>
-                <th>Unit</th>
-                <th>In Stock</th>
-                <th>Description</th>
+          <thead>
+            <tr>
+              <th className="column-article-no">Article No.</th>
+              <th className="column-name">Product/Service</th>
+              <th className="column-in-price">In Price</th>
+              <th className="column-price">Price</th>
+              <th className="column-unit">Unit</th>
+              <th className="column-stock">In Stock</th>
+              <th className="column-description">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            {products.map((product) => (
+              <tr key={product.id || product.articleNo}>
+                <td className="column-article-no">{product.article_no}</td>
+                <td className="column-name">{product.product_name}</td>
+                <td className="column-in-price">{product.in_price}</td>
+                <td className="column-price">{product.price}</td>
+                <td className="column-unit">{product.unit}</td>
+                <td className="column-stock">{product.in_stock}</td>
+                <td className="column-description">{product.description}</td>
               </tr>
-            </thead>
-            <tbody>
-              {products.map((product) => (
-                <tr key={product.id || product.articleNo}>
-                  <td className="arrow-right">{product.article_no}</td>
-                  <td>{product.product_name}</td>
-                  <td>{product.in_price}</td>
-                  <td>{product.price}</td>
-                  <td>{product.unit}</td>
-                  <td>{product.in_stock}</td>
-                  <td>{product.description}</td>
-                </tr>
-              ))}
-            </tbody>
+            ))}
+          </tbody>
           </table>
         </div>
       </div>
