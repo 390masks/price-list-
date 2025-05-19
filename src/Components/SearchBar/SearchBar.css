@@ -63,8 +63,8 @@
 
 .search-container input:focus {
   outline: none;
-  border-color: #3498db;
-  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+  border-color: transparent;
+  box-shadow: none;
 }
 
 .action-buttons {
