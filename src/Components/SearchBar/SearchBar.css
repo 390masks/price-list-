@@ -46,12 +46,13 @@
 .input-wrapper input {
   border: none;
   outline: none;
-  padding: 4px 12px;
+  padding: 14px 12px;
   border-radius: 50px;
   font-size: 0.9rem;
   background-color: transparent;
   color: #000;
   width: 300px;
+  margin: 0px;
 }
 
 .search-icon {
