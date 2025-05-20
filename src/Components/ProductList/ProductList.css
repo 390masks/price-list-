@@ -8,7 +8,6 @@
   background: white;
   z-index: 800;
   margin-top: 40px;
-  
 }
 
 .price-list-container {
@@ -32,6 +31,7 @@
   margin: 0;
   outline: none;
 }
+
 .save-button {
   background: none;
   border: none;
@@ -51,6 +51,7 @@
   outline: none;
   background-color: #d0f0ff;
 }
+
 .price-list-table {
   width: 100%;
   border-collapse: separate;
@@ -77,14 +78,16 @@
   padding: 14px 18px;
   text-align: left;
 }
-.column-options{
+
+.column-options {
   border: none !important;
   background: none !important;
   box-shadow: none !important;
   font-weight: bolder;
   color: lightblue;
 }
-.arrow-right{
+
+.arrow-right {
   border: none !important;
   background: none !important;
   box-shadow: none !important;
@@ -129,6 +132,7 @@
   .scrollable-page {
     left: 0;
   }
+
   .price-list-table {
     min-width: 100%;
   }
@@ -142,19 +146,24 @@
     overflow-y: visible;
     margin-top: 0px !important;
   }
+
   .price-list-container {
     width: 100% !important;
     margin: 0 !important;
     padding: 0 !important;
   }
+
   .price-list-table td {
     padding: 10px 12px;
     font-size: 14px;
   }
+
   .arrow-down::after,
   .arrow-right::before {
     font-size: 0.7em;
   }
+
+  /* 👇 Hide all non-required columns on mobile */
   .column-article-no,
   .column-in-price,
   .column-unit,
@@ -162,9 +171,12 @@
   .column-description {
     display: none;
   }
+
+  /* 👇 Show only necessary columns */
   .column-name,
-  .column-price {
-    font-size: 14px;
-    padding: 10px;
+  .column-price,
+  .column-options,
+  .arrow-right {
+    display: table-cell;
   }
 }
