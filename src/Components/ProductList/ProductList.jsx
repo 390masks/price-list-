@@ -66,7 +66,7 @@ const ProductList = () => {
     <th className="column-unit">Unit</th>
     <th className="column-stock">In Stock</th>
     <th className="column-description">Description</th>
-    <th className="column-options">Options</th>
+    <th className="column-options"></th>
   </tr>
 </thead>
 <tbody>
