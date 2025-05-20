@@ -163,7 +163,6 @@
     font-size: 0.7em;
   }
 
-  /* 👇 Hide all non-required columns on mobile */
   .column-article-no,
   .column-in-price,
   .column-unit,
@@ -172,7 +171,6 @@
     display: none;
   }
 
-  /* 👇 Show only necessary columns */
   .column-name,
   .column-price,
   .column-options,
